@@ -1,0 +1,15 @@
+ CREATE DATABASE BIBLIOTECA;
+
+ USE BIBLIOTECA;
+
+ CREATE TABLE generos(
+     id INT AUTO_INCREMENT PRIMARYKEY, 
+     nome VARCHAR(255) NOT NULL
+ );
+
+ CREATE TABLE LIVROS(
+     id INT AUTO_INCREMENT PRIMARY KEY
+     titulo VARCHAR(255) not null,
+     id-genero int not null,
+     FOREIGN KEY (id_genero) REFERENCES generos(ID)
+ );
